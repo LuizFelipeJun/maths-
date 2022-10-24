@@ -1,0 +1,21 @@
+.login_div1, .login_div2 {
+   float: none;
+   padding: 5px;
+   background: linear-gradient(#F08080 0%, #8B0000 100%);
+   border: 5px solid salmon;
+   border-radius: 15px;
+}
+
+body {
+   font-family: 'Mali', cursive;
+   background-color: #800000;
+}
+
+h1 {
+   color: whitesmoke;
+}
+
+img {
+   width: 255px;
+   height: 255px;
+}
