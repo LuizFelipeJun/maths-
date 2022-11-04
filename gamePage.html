@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUIZ DE MATEMATICA</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="game.css">
+
+</head>
+<body>
+	<h4 id="Nome1"></h4> <span id="PontoJogador1"></span>
+
+	<br>
+
+	<h4 id="Nome2"></h4> <span id="PontoJogador2"></span>
+
+	<center>  
+		<h2> Quiz De Matematica </h2>
+		<h3 id="perguntaJogador"></h3>	
+		<h3 id="respostaJogador"></h3>
+		<div id="output" class="col-lg-6"></div>
+
+		<br><br>
+
+		<h4> Numero 1 </h4>
+
+		<input type="number" id="num1" class="form-control" placeholder="Escreva o num 1">
+
+		<br>
+
+		<h4> Numero 2 </h4>
+
+		<input type="number" id="num1" class="form-control" placeholder="Escreva o num 1">
+
+		<br>
+
+		<button class="btn btn-succses" onclick="enviar()"> Enviar numeros </button>
+	</center>
+	<script src="gamePage.js"></script>
+</body>
+</html>
