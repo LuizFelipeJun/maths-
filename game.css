@@ -8,7 +8,8 @@
 
 body {
    font-family: 'Mali', cursive;
-   background-color: #800000;
+   background-color: cornflowerblue;
+   font-size: medium;
 }
 
 h1 {
@@ -18,4 +19,8 @@ h1 {
 img {
    width: 255px;
    height: 255px;
+}
+
+#output {
+   font-weight: bold !important;
 }

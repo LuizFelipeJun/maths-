@@ -15,12 +15,15 @@ function enviar() {
    var Numero2 = document.getElementById("num2").value;
    var resposta = parseInt(Numero1) * parseInt(Numero2);
 
-   var pergunta = "<h4>" + Numero1 + " x " + Numero2 + "</h4>";
+   var pergunta = "<h4 id='pergunta'>" + Numero1 + " x " + Numero2 + "</h4>";
    var entradaResposta = "<br> Resposta: <input type='number' id='inputCheckBox'>";
    var botao = "<br><br> <button onclick='checar()' class='btn btn-info'> Checar </button>";
    var linha = pergunta + entradaResposta + botao;
 
    document.getElementById("output").innerHTML = linha;
+
+   document.getElementById("pergunta").style.fontWeight = 900;
+   document.getElementById("pergunta").style.fontSize = "30px";
 
    document.getElementById("num1").value = "";
    document.getElementById("num2").value = "";
