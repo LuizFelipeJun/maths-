@@ -10,10 +10,12 @@ document.getElementById("Nome2").innerHTML = nomeJogador2 + " : ";
 document.getElementById("PontoJogador1").innerHTML = pontosDoJogador1;
 document.getElementById("PontoJogador2").innerHTML = pontosDoJogador2;
 
+var resposta;
+
 function enviar() {
    var Numero1 = document.getElementById("num1").value;
    var Numero2 = document.getElementById("num2").value;
-   var resposta = parseInt(Numero1) * parseInt(Numero2);
+   resposta = parseInt(Numero1) * parseInt(Numero2);
 
    var pergunta = "<h4 id='pergunta'>" + Numero1 + " x " + Numero2 + "</h4>";
    var entradaResposta = "<br> Resposta: <input type='number' id='inputCheckBox'>";
@@ -27,4 +29,38 @@ function enviar() {
 
    document.getElementById("num1").value = "";
    document.getElementById("num2").value = "";
+}
+
+var turnoDaPergunta = "jogador1";
+var turnoDaResposta = "jogador2";
+
+function checar() {
+   var pegarResposta = document.getElementById("inputCheckBox").value;
+   if(pegarResposta == resposta) {
+      if(turnoDaResposta == "jogador1") {
+         pontosDoJogador1 = pontosDoJogador1 + 1;
+         document.getElementById("pontoJogador1").innerHTML = pontosDoJogador1;
+      } else {
+         pontosDoJogador2 = pontosDoJogador2 + 1;
+         document.getElementById("pontoJogador2").innerHTML = pontosDoJogador2;
+      }
+
+   }
+   if(turnoDaPergunta == "jogador1") {
+      turnoDaPergunta = "jogador2";
+      document.getElementById("perguntaJogador").innerHTML = "Turno da pergunta: " + nomeJogador2;
+   }
+   else{
+      turnoDaPergunta = "jogador1";
+      document.getElementById("perguntaJogador").innerHTML = "Turna da pegunta: " + nomeJogador1;
+   }
+   if(turnoDaResposta == "jogador1") {
+      turnoDaResposta = "jogador2";
+      document.getElementById("respostaJogador").innerHTML = "Turno da resposta: " + nomeJogador2;
+   }
+   else{
+      turnoDaResposta = "jogador1";
+      document.getElementById("respostaJogador").innerHTML = "Turno da resposta: " + nomeJogador1;
+   }
+   document.getElementById("output").innerHTML = "";
 }
