@@ -39,10 +39,10 @@ function checar() {
    if(pegarResposta == resposta) {
       if(turnoDaResposta == "jogador1") {
          pontosDoJogador1 = pontosDoJogador1 + 1;
-         document.getElementById("pontoJogador1").innerHTML = pontosDoJogador1;
+         document.getElementById("PontoJogador1").innerHTML = pontosDoJogador1;
       } else {
          pontosDoJogador2 = pontosDoJogador2 + 1;
-         document.getElementById("pontoJogador2").innerHTML = pontosDoJogador2;
+         document.getElementById("PontoJogador2").innerHTML = pontosDoJogador2;
       }
 
    }
